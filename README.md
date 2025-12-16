@@ -1,10 +1,10 @@
 <!-- # jarowaterpolo.github.io -->
 <center> Jaro Nieuwenhuisen </center>
 
-17Y
+<center> 17Y </center>
 
-Nationality: Dutch
+<center> Nationality: Dutch </center>
 
-Languages: Dutch, English
+<center> Languages: Dutch, English </center>
 
-<p align="center">centered text</p>
+<!-- <p align="center">centered text</p> -->
