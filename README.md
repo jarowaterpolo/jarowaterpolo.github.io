@@ -5,4 +5,4 @@ Jaro Nieuwenhuisen
 
 Nationality: Dutch
 
-Laguages: Dutch, English
+Languages: Dutch, English
