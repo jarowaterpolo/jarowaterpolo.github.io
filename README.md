@@ -1,5 +1,8 @@
 <!-- # jarowaterpolo.github.io -->
-Jaro Nieuwenhuisen <p></p>
+Jaro Nieuwenhuisen 
+
 17Y
+
 Nationality: Dutch
+
 Laguages: Dutch, English
