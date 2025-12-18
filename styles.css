@@ -62,3 +62,7 @@ p {
     margin: 20px;
     padding: 20px;
 }
+
+.bottom {
+    bottom: 0px;
+}
