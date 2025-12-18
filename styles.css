@@ -1,4 +1,6 @@
 body {
+    width: 100%;
+    height: 100%;
     border: 2px solid #007bff;
     background-color: black;
 }
@@ -33,28 +35,6 @@ p {
     right: 0;
 }
 
-.topRight {
-    background-color: black;
-    color: white;
-    border: 2px solid #007bff;
-    margin: 20px;
-    padding: 20px;
-    position: absolute;
-    top: 0px;
-    right: 0;
-}
-
-.topLeft {
-    background-color: black;
-    color: white;
-    border: 2px solid #007bff;
-    margin: 20px;
-    padding: 20px;
-    position: absolute;
-    top: 0px;
-    left: 0;
-}
-
 .center {
     background-color: black;
     color: white;
@@ -63,10 +43,47 @@ p {
     padding: 20px;
 }
 
-.bottom {
-    bottom: 0px;
+/* .top {
+    top: 0px;
+    background-color: black;
+    color: white;
+    border: 2px solid #007bff;
+    margin: 20px;
+    padding: 20px;
+    position: absolute;
+    left: 0;
 }
 
-.TopSetBottom {
-    top: 400px;
+.bottom {
+    bottom: 0px;
+    background-color: black;
+    color: white;
+    border: 2px solid #007bff;
+    margin: 20px;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+} */
+
+.containerH {
+    display: flex;
+    width: 100vw;
+}
+
+.containerV {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top,
+.middleV,
+.bottom {
+    flex: 1;
+}
+
+.left,
+.middleH,
+.right {
+    flex: 1;
 }
