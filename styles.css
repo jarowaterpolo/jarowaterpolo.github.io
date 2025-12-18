@@ -43,27 +43,29 @@ p {
     padding: 20px;
 }
 
-/* .top {
-    top: 0px;
-    background-color: black;
-    color: white;
-    border: 2px solid #007bff;
-    margin: 20px;
-    padding: 20px;
-    position: absolute;
-    left: 0;
+.container {
+    display: grid;
+
+    /* 3 columns: left, center, right */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* 3 rows: top, middle, bottom */
+    grid-template-rows: auto auto auto;
+
+    /* Name the areas */
+    grid-template-areas:
+        "topLeft topMiddle topRight"
+        "middleLeft Middle middleRight"
+        "bottomLeft bottomMiddle bottomRight";
+
+    height: 100vh;
 }
 
-.bottom {
-    bottom: 0px;
-    background-color: black;
-    color: white;
-    border: 2px solid #007bff;
-    margin: 20px;
+.topLeft {
+    grid-area: topLeft;
+    background: black;
     padding: 20px;
-    position: absolute;
-    left: 0;
-} */
+}
 
 .containerH {
     display: flex;
