@@ -65,26 +65,23 @@ p {
     right: 50%;
 }
 
-.page-projects .body {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
+.grid3x3 {
+    flex: 1;
+    overflow-y: auto; /* Scroll if content overflows */
 
-.container {
     display: grid;
 
     /* 3 columns: left, center, right */
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
 
     /* 3 rows: top, middle, bottom */
     grid-template-rows: auto auto auto;
 
     /* Name the areas */
     grid-template-areas:
-        "topLeft topMiddle topRight"
-        "middleLeft Middle middleRight"
-        "bottomLeft bottomMiddle bottomRight";
+        "topLeft topCenter topRight"
+        "middleLeft middleCenter middleRight"
+        "bottomLeft bottomCenter bottomRight";
 }
 
 .topLeft {
@@ -92,8 +89,8 @@ p {
     padding: 20px;
 }
 
-.topMiddle {
-    grid-area: topMiddle;
+.topCenter {
+    grid-area: topCenter;
     padding: 20px;
 }
 
@@ -107,8 +104,8 @@ p {
     padding: 20px;
 }
 
-.Middle {
-    grid-area: Middle;
+.middleCenter {
+    grid-area: middleCenter;
     padding: 20px;
 }
 
@@ -122,8 +119,8 @@ p {
     padding: 20px;
 }
 
-.bottomMiddle {
-    grid-area: bottomMiddle;
+.bottomCenter {
+    grid-area: bottomCenter;
     padding: 20px;
 }
 
