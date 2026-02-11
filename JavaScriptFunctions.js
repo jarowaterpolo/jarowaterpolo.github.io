@@ -49,3 +49,9 @@ links.forEach(link => {
         }, 100); // 100ms is enough for a short click sound
     });
 });
+
+// Get the video element
+const trailerVideo = document.getElementById("trailer");
+
+// Set starting volume (0.0 = muted, 1.0 = full volume)
+trailerVideo.volume = 0.1; // 30% volume
