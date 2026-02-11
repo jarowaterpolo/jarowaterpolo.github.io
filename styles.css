@@ -58,6 +58,15 @@ p {
     top: 100px;
 }
 
+.TimeAndDate {
+    background-color: black;
+    color: white;
+    border: 2px solid #007bff;
+    margin: 20px;
+    padding: 20px;
+    bottom: 100px;
+}
+
 .link {
     background-color: black;
     color: white;
