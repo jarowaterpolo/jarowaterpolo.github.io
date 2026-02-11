@@ -67,6 +67,13 @@ p {
     bottom: 100px;
 }
 
+.TimeAndDateText{
+    color: #00a6ff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace; 
+}
+
 .link {
     background-color: black;
     color: white;
