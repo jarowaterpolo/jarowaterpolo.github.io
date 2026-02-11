@@ -58,9 +58,32 @@ p {
     top: 100px;
 }
 
-.link {
+.link{
+    /* display: block; */
+    color: white;
+    text-decoration: none;
+}
+
+.link p{
     color: white;
 }
+
+.link img{
+    transition: filter 0.2s;
+}
+
+.link:hover{
+    color: #007bff;
+}
+
+.link:hover p{
+    color: #007bff;
+}
+
+.link:hover img{
+    filter: brightness(1.2);
+}
+
 
 .TimeAndDate {
     background-color: black;
