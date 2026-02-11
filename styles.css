@@ -28,14 +28,17 @@ body {
 
 h1 {
     color: #007bff;
+    font-family: monospace; 
 }
 
 h2 {
     color: #007bff;
+    font-family: monospace; 
 }
 
 p {
     color: white;
+    /* font-family: monospace;  */
 }
 
 .icons {
