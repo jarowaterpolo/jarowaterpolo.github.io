@@ -50,6 +50,7 @@ links.forEach(link => {
     });
 });
 
+//Video Audio Setter
 // Get the video element
 const trailerVideo = document.getElementById("trailer");
 
