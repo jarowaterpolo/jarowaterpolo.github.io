@@ -23,6 +23,7 @@ body {
     width: 15%;
     border: 2px solid #007bff;
     background-color: black;
+    background-image: url("Images/NumberCodeImage.webp");
 }
 
 h1 {
