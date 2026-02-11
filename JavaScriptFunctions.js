@@ -7,6 +7,9 @@ updateTime();
 setInterval(updateTime, 1000);
 
 function updateAge() {
+    const ageElement = document.getElementById("age")
+    if (!ageElement) return;
+
     const now = new Date();
     const birthDate = new Date(2008, 2, 13);
 
@@ -20,7 +23,29 @@ function updateAge() {
         age--;
     }
 
-    document.getElementById("age").textContent = age;
+    ageElement.textContent = age;
 }
 
 updateAge();
+
+// Load the sound
+const clickSound = new Audio("Audio/UI-Click.ogg"); // put your audio file in the right folder
+clickSound.preload = "auto";
+
+// Select all links with class 'link'
+const links = document.querySelectorAll(".link");
+
+links.forEach(link => {
+    link.addEventListener("click", () => {
+        event.preventDefault(); // stop the default navigation
+        
+        clickSound.currentTime = 0;
+        clickSound.play();
+
+        // Wait a tiny bit before navigating so the sound can play
+        const url = link.href;
+        setTimeout(() => {
+            window.location.href = url;
+        }, 100); // 100ms is enough for a short click sound
+    });
+});
