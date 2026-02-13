@@ -50,10 +50,14 @@ links.forEach(link => {
     });
 });
 
-//Video Audio Setter
-// Get the video element
-const trailerVideo = document.getElementById("trailer");
-if (!trailerVideo) return;
+function setVideos(){
+    //Video Audio Setter
+    // Get the video element
+    const trailerVideo = document.getElementById("trailer");
+    if (!trailerVideo) return;
 
-// Set starting volume (0.0 = muted, 1.0 = full volume)
-trailerVideo.volume = 0.1; // 30% volume
+    // Set starting volume (0.0 = muted, 1.0 = full volume)
+    trailerVideo.volume = 0.1; // 30% volume
+}
+
+setVideos();
