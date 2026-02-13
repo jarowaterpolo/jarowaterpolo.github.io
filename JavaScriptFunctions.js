@@ -11,7 +11,7 @@ function updateAge() {
     if (!ageElement) return;
 
     const now = new Date();
-    const birthDate = new Date(2008, 2, 13);
+    const birthDate = new Date(2008, 2 -1, 13);
 
     let age = now.getFullYear() - birthDate.getFullYear();
 
