@@ -1,3 +1,4 @@
+//Time and Date
 function updateTime() {
     const now = new Date();
     document.getElementById("clock").textContent = now.toLocaleString();
@@ -6,6 +7,7 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 1000);
 
+//Age
 function updateAge() {
     const ageElement = document.getElementById("age")
     if (!ageElement) return;
@@ -27,6 +29,31 @@ function updateAge() {
 }
 
 updateAge();
+
+// Countdown to Birthday
+function BirthdayCountdown() {
+    const dayDifferenceElement = document.getElementById("birthdayCountdown");
+    if (!dayDifferenceElement) return;
+
+    const today = new Date();
+    const currentYear = today.getFullYear();
+
+    let nextBirthday = new Date(currentYear, 2 -1, 13);
+
+    // If birthday already happened this year → use next year
+    if (nextBirthday < today) {
+        nextBirthday = new Date(currentYear + 1, 2 -1, 13);
+    }
+
+    const diffTime = nextBirthday - today;
+
+    // Convert milliseconds to days
+    const daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    dayDifferenceElement.textContent = daysLeft + " days till next birthday";
+}
+
+BirthdayCountdown();
 
 // Load the sound
 const clickSound = new Audio("Audio/UI-Click.ogg"); // put your audio file in the right folder
@@ -50,6 +77,7 @@ links.forEach(link => {
     });
 });
 
+//Video
 function setVideos(){
     //Video Audio Setter
     // Get the video element
