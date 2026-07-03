@@ -6,20 +6,22 @@ body {
     left: auto;
 }
 
-.StandardLayout{
+.StandardLayout {
     display: flex;
     width: 100%;
     height: 100Vh;
 }
 
-.body{
+.body {
     flex: 1;
-    overflow-y: auto; /* Scroll if content overflows */
+    overflow-y: auto;
+    /* Scroll if content overflows */
     width: 85%;
     border: 2px solid #007bff;
     background-color: black;
 }
-.nav{
+
+.nav {
     width: 15%;
     border: 2px solid #007bff;
     background-color: black;
@@ -28,12 +30,12 @@ body {
 
 h1 {
     color: #007bff;
-    font-family: monospace; 
+    font-family: monospace;
 }
 
 h2 {
     color: #007bff;
-    font-family: monospace; 
+    font-family: monospace;
 }
 
 p {
@@ -58,29 +60,29 @@ p {
     top: 100px;
 }
 
-.link{
+.link {
     /* display: block; */
     color: white;
     text-decoration: none;
 }
 
-.link p{
+.link p {
     color: white;
 }
 
-.link img{
+.link img {
     transition: filter 0.2s;
 }
 
-.link:hover{
+.link:hover {
     color: #007bff;
 }
 
-.link:hover p{
+.link:hover p {
     color: #007bff;
 }
 
-.link:hover img{
+.link:hover img {
     filter: brightness(1.2);
 }
 
@@ -94,10 +96,10 @@ p {
     bottom: 100px;
 }
 
-.TimeAndDateText{
+.TimeAndDateText {
     color: #00a6ff;
     font-weight: bold;
-    font-family: monospace; 
+    font-family: monospace;
 }
 
 .center {
@@ -111,7 +113,8 @@ p {
 
 .grid3x3 {
     flex: 1;
-    overflow-y: auto; /* Scroll if content overflows */
+    overflow-y: auto;
+    /* Scroll if content overflows */
 
     display: grid;
 
@@ -176,4 +179,19 @@ p {
 
 #bottomID {
     bottom: 0;
+}
+
+.overclocked-project,
+.overclocked-code {
+    text-align: center;
+}
+
+.overclocked-code {
+    margin-top: 2500px;
+    /* tweak */
+}
+
+.ANT-D {
+    margin-top: 100px;
+    /* tweak */
 }
