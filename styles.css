@@ -1,7 +1,7 @@
 body {
     width: 100%;
     height: 100%;
-    border: 2px solid #007bff;
+    border: 8px solid #007bff;
     background-color: black;
     left: auto;
 }
@@ -23,7 +23,7 @@ body {
 
 .nav {
     width: 15%;
-    border: 2px solid #007bff;
+    border: 8px solid #007bff;
     background-color: black;
     background-image: url("Images/NumberCodeImage.webp");
 }
@@ -130,6 +130,57 @@ p {
         "middleLeft middleCenter middleRight"
         "bottomLeft bottomCenter bottomRight";
 }
+
+.grid2x2 {
+    flex: 1;
+    overflow-y: auto;
+    /* Scroll if content overflows */
+
+    display: grid;
+
+    /* 2 columns: left, right */
+    grid-template-columns: 1fr 1fr;
+
+    /* 2 rows: top, bottom */
+    grid-template-rows: auto auto;
+
+    /* Name the areas */
+    grid-template-areas:
+        "topLeft  topRight"
+        "bottomLeft bottomRight";
+}
+
+.splitVertical {
+    flex: 1;
+    overflow-y: auto;
+    /* Scroll if content overflows */
+
+    display: grid;
+
+    /* 2 rows: top, bottom */
+    grid-template-rows: auto auto;
+
+    /* Name the areas */
+    grid-template-areas:
+        "topLeft"
+        "bottomLeft";
+}
+
+.splitHorizontal {
+    flex: 1;
+    overflow-y: auto;
+    /* Scroll if content overflows */
+
+    display: grid;
+
+    /* 2 columns: left, right */
+    grid-template-columns: 1fr 1fr;
+
+    /* Name the areas */
+    grid-template-areas:
+        "topLeft  topRight"
+}
+
 
 .topLeft {
     grid-area: topLeft;
