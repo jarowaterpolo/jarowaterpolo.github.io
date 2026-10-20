@@ -186,11 +186,11 @@ p {
     }
 
     .profileBio {
-        font-size: medium;
+        font-size: smaller;
     }
 
     .profileContact {
-        font-size: medium;
+        font-size: smaller;
     }
 
     .links {
