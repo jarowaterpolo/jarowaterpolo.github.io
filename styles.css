@@ -3,285 +3,120 @@ body {
     height: 100%;
     border: 8px solid #007bff;
     background-color: black;
-    left: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Standaard Layout voor Computer */
 .StandardLayout {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
     display: grid;
-
-    /* 2 columns: left, right */
     grid-template-columns: 85% 15%;
-
-    /* Name the areas */
-    grid-template-areas:
-        "mainPage  nav"
-}
-
-.body {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-    width: 100%;
-    border: 2px solid #007bff;
-    background-color: black;
+    grid-template-areas: "mainPage nav";
+    height: 100vh;
 }
 
 .mainPage {
     display: flex;
-    height: 100Vh;
+    flex-direction: column;
+    overflow-y: auto;
 }
 
 .nav {
-    /* width: 15%; */
     border: 8px solid #007bff;
     background-color: black;
     background-image: url("Images/NumberCodeImage.webp");
-    /* margin-right: 15%; */
+    overflow-y: auto;
 }
 
-h1 {
-    color: #007bff;
-    font-family: monospace;
+/* Flexbox toepassen op je innerlijke splitsingen zodat ze kunnen omdraaien op mobiel */
+.splitHorizontal2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
-h2 {
-    color: #007bff;
-    font-family: monospace;
+.splitHorizontal2 .topLeft, 
+.splitHorizontal2 .topRight {
+    flex: 1;
 }
 
-p {
-    color: white;
-    /* font-family: monospace;  */
+/* CSS Classes in plaats van inline stijlen */
+.profile-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto; /* Behoudt de juiste verhoudingen zonder te vervormen */
+    display: block;
 }
 
-.icons {
+.profile-info {
+    font-size: 24px; /* Iets subtieler op grote schermen */
+}
+
+.cv-content {
+    font-size: 20px;
+}
+
+h1 { color: #007bff; font-family: monospace; }
+h2 { color: #007bff; font-family: monospace; }
+h3 { color: #007bff; font-family: monospace; }
+p { color: white; }
+
+.CVBorder, .links, .TimeAndDate, .icons {
     background-color: black;
     color: white;
     border: 2px solid #007bff;
-    margin: 20px;
-    padding: 20px;
+    margin: 15px;
+    padding: 15px;
 }
 
 .CVBorder {
-    background-color: black;
-    color: white;
-    border: 8px solid #007bff;
-    margin: 20px;
-    padding: 20px;
+    border-width: 6px;
 }
 
-.links {
-    background-color: black;
-    color: white;
-    border: 2px solid #007bff;
-    margin: 20px;
-    padding: 20px;
-    top: 100px;
-}
+.link { text-decoration: none; }
+.link p { color: white; margin: 5px 0; }
+.link:hover p { color: #007bff; }
+.TimeAndDateText { color: #00a6ff; font-weight: bold; font-family: monospace; }
 
-.link {
-    /* display: block; */
-    color: white;
-    text-decoration: none;
-}
+/* ==========================================================================
+   SLIMME MOBIELE REGELS (Voor schermen smaller dan 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Verander de 85% / 15% kolommen in 1 grote kolom onder elkaar */
+    .StandardLayout {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "mainPage"
+            "nav";
+        height: auto;
+    }
+    
+    .mainPage {
+        height: auto;
+    }
 
-.link p {
-    color: white;
-}
+    /* Zorg dat de twee kolommen (foto + info EN werkervaring + skills) onder elkaar klappen */
+    .splitHorizontal2 {
+        flex-direction: column;
+    }
 
-.link img {
-    transition: filter 0.2s;
-}
+    /* Maak de lettertypes passend voor een telefoonscherm */
+    .profile-info {
+        font-size: 18px;
+    }
 
-.link:hover {
-    color: #007bff;
-}
+    .cv-content {
+        font-size: 16px;
+    }
 
-.link:hover p {
-    color: #007bff;
-}
+    h1 {
+        font-size: 22px;
+    }
 
-.link:hover img {
-    filter: brightness(1.2);
-}
-
-
-.TimeAndDate {
-    background-color: black;
-    color: white;
-    border: 2px solid #007bff;
-    margin: 20px;
-    padding: 20px;
-    bottom: 100px;
-}
-
-.TimeAndDateText {
-    color: #00a6ff;
-    font-weight: bold;
-    font-family: monospace;
-}
-
-.center {
-    background-color: black;
-    color: white;
-    border: 2px solid #007bff;
-    margin: 20px;
-    padding: 20px;
-    right: 50%;
-}
-
-.grid3x3 {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 3 columns: left, center, right */
-    grid-template-columns: 1fr auto 1fr;
-
-    /* 3 rows: top, middle, bottom */
-    grid-template-rows: auto auto auto;
-
-    /* Name the areas */
-    grid-template-areas:
-        "topLeft topCenter topRight"
-        "middleLeft middleCenter middleRight"
-        "bottomLeft bottomCenter bottomRight";
-}
-
-.grid2x2 {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 2 columns: left, right */
-    grid-template-columns: 1fr 1fr;
-
-    /* 2 rows: top, bottom */
-    grid-template-rows: auto auto;
-
-    /* Name the areas */
-    grid-template-areas:
-        "topLeft  topRight"
-        "bottomLeft bottomRight";
-}
-
-.splitVertical2 {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 2 rows: top, bottom */
-    grid-template-rows: auto auto;
-
-    /* Name the areas */
-    grid-template-areas:
-        "topLeft"
-        "bottomLeft";
-}
-
-.splitHorizontal2 {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 2 columns: left, right */
-    grid-template-columns: 1fr 1fr;
-
-    /* Name the areas */
-    grid-template-areas:
-        "topLeft  topRight"
-}
-
-.splitHorizontal3 {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 2 columns: left, center ,right */
-    grid-template-columns: 1fr auto 1fr;
-
-    /* Name the areas */
-    grid-template-areas:
-        "topLeft topCenter topRight"
-}
-
-
-.topLeft {
-    grid-area: topLeft;
-    padding: 20px;
-}
-
-.topCenter {
-    grid-area: topCenter;
-    padding: 20px;
-}
-
-.topRight {
-    grid-area: topRight;
-    padding: 20px;
-}
-
-.middleLeft {
-    grid-area: middleLeft;
-    padding: 20px;
-}
-
-.middleCenter {
-    grid-area: middleCenter;
-    padding: 20px;
-}
-
-.middleRight {
-    grid-area: middleRight;
-    padding: 20px;
-}
-
-.bottomLeft {
-    grid-area: bottomLeft;
-    padding: 20px;
-}
-
-.bottomCenter {
-    grid-area: bottomCenter;
-    padding: 20px;
-}
-
-.bottomRight {
-    grid-area: bottomRight;
-    padding: 20px;
-    position: relative;
-}
-
-#bottomID {
-    bottom: 0;
-}
-
-.overclocked-project,
-.overclocked-code {
-    text-align: center;
-}
-
-.overclocked-code {
-    /* margin-top: 1700px; */
-    margin-top: 1850px;
-    /* tweak */
-}
-
-.ANT-D {
-    margin-top: 100px;
-    /* tweak */
+    /* Zorg dat de profielfoto niet groter wordt dan het telefoonscherm */
+    .profile-img {
+        max-width: 250px;
+        margin: 0 auto; /* Centreert de foto netjes */
+    }
 }
