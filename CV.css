@@ -1,6 +1,7 @@
 .CV{
     position: relative;
     width: 70%;
+    max-width: 1000px;   /* Zorg dat hij op PC niet breder wordt dan 1000px */
     margin: 0 auto;
     padding: 10px;
 
@@ -10,6 +11,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    box-sizing: border-box;
 }
 .profileContainer{
     padding: 20px;
@@ -34,6 +36,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap; /* CRUCIEEL: zorgt dat bio en contact onder elkaar klappen op mobiel */
 }
 /* #endregion */
 /* #region profileTextItems */
@@ -124,3 +127,38 @@ p {
     color: white;
 }
 /* #endregion */
+
+/* --- RESPONSIVE INSTELLINGEN VOOR MOBIEL --- */
+/* @media (max-width: 768px) {
+    
+    .profileContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profileText {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profileContact p {
+        text-align: center; 
+    }
+
+    .links {
+        position: relative; 
+        top: auto;
+        right: auto;
+        margin: 20px auto;
+        width: 90%;
+        display: flex;      
+        justify-content: space-around;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+
+    .links br {
+        display: none; 
+    }
+} */
