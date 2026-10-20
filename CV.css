@@ -129,7 +129,7 @@ p {
 /* #endregion */
 
 /* --- RESPONSIVE INSTELLINGEN VOOR MOBIEL --- */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     
     .profileContainer {
         flex-direction: column;
@@ -161,4 +161,4 @@ p {
     .links br {
         display: none; 
     }
-} */
+}
