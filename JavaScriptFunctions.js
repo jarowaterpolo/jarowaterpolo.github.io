@@ -1,7 +1,9 @@
 //Time and Date
 function updateTime() {
     const now = new Date();
-    document.getElementById("clock").textContent = now.toLocaleString();
+    const clockElement = document.getElementById("clock");
+    if (!clockElement) return;
+    clockElement.textContent = now.toLocaleString();
 }
 
 updateTime();

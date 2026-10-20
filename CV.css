@@ -1,46 +1,64 @@
-body {
-    width: 100%;
-    height: 100%;
+.CV{
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+
     border: 8px solid #007bff;
     background-color: black;
-    left: auto;
-}
-
-.StandardLayout {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 2 columns: left, right */
-    grid-template-columns: 85% 15%;
-
-    /* Name the areas */
-    grid-template-areas:
-        "mainPage  nav"
-}
-
-.body {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-    width: 100%;
-    border: 2px solid #007bff;
-    background-color: black;
-}
-
-.mainPage {
+    
     display: flex;
-    height: 100Vh;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.nav {
-    /* width: 15%; */
-    border: 8px solid #007bff;
+.profileContainer{
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profileImg{
+    flex-shrink: 0;
+    width: 180px;
+    height: auto;
+}
+
+.profileText{
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.profileBio h1 {
+    margin: 0 0 5px 0;
+    font-size: 2rem;
+}
+
+.profileContact p {
+    margin: 4px 0;
+    text-align: left;
+}
+
+
+.infoContainer{
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body{
     background-color: black;
     background-image: url("Images/NumberCodeImage.webp");
-    /* margin-right: 15%; */
 }
 
 h1 {
@@ -55,15 +73,6 @@ h2 {
 
 p {
     color: white;
-    /* font-family: monospace;  */
-}
-
-.icons {
-    background-color: black;
-    color: white;
-    border: 2px solid #007bff;
-    margin: 20px;
-    padding: 20px;
 }
 
 .CVBorder {
@@ -74,57 +83,6 @@ p {
     padding: 20px;
 }
 
-.links {
-    background-color: black;
-    color: white;
-    border: 2px solid #007bff;
-    margin: 20px;
-    padding: 20px;
-    top: 100px;
-}
-
-.link {
-    /* display: block; */
-    color: white;
-    text-decoration: none;
-}
-
-.link p {
-    color: white;
-}
-
-.link img {
-    transition: filter 0.2s;
-}
-
-.link:hover {
-    color: #007bff;
-}
-
-.link:hover p {
-    color: #007bff;
-}
-
-.link:hover img {
-    filter: brightness(1.2);
-}
-
-
-.TimeAndDate {
-    background-color: black;
-    color: white;
-    border: 2px solid #007bff;
-    margin: 20px;
-    padding: 20px;
-    bottom: 100px;
-}
-
-.TimeAndDateText {
-    color: #00a6ff;
-    font-weight: bold;
-    font-family: monospace;
-}
-
 .center {
     background-color: black;
     color: white;
@@ -132,156 +90,4 @@ p {
     margin: 20px;
     padding: 20px;
     right: 50%;
-}
-
-.grid3x3 {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 3 columns: left, center, right */
-    grid-template-columns: 1fr auto 1fr;
-
-    /* 3 rows: top, middle, bottom */
-    grid-template-rows: auto auto auto;
-
-    /* Name the areas */
-    grid-template-areas:
-        "topLeft topCenter topRight"
-        "middleLeft middleCenter middleRight"
-        "bottomLeft bottomCenter bottomRight";
-}
-
-.grid2x2 {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 2 columns: left, right */
-    grid-template-columns: 1fr 1fr;
-
-    /* 2 rows: top, bottom */
-    grid-template-rows: auto auto;
-
-    /* Name the areas */
-    grid-template-areas:
-        "topLeft  topRight"
-        "bottomLeft bottomRight";
-}
-
-.splitVertical2 {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 2 rows: top, bottom */
-    grid-template-rows: auto auto;
-
-    /* Name the areas */
-    grid-template-areas:
-        "topLeft"
-        "bottomLeft";
-}
-
-.splitHorizontal2 {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 2 columns: left, right */
-    grid-template-columns: 1fr 1fr;
-
-    /* Name the areas */
-    grid-template-areas:
-        "topLeft  topRight"
-}
-
-.splitHorizontal3 {
-    flex: 1;
-    overflow-y: auto;
-    /* Scroll if content overflows */
-
-    display: grid;
-
-    /* 2 columns: left, center ,right */
-    grid-template-columns: 1fr auto 1fr;
-
-    /* Name the areas */
-    grid-template-areas:
-        "topLeft topCenter topRight"
-}
-
-
-.topLeft {
-    grid-area: topLeft;
-    padding: 20px;
-}
-
-.topCenter {
-    grid-area: topCenter;
-    padding: 20px;
-}
-
-.topRight {
-    grid-area: topRight;
-    padding: 20px;
-}
-
-.middleLeft {
-    grid-area: middleLeft;
-    padding: 20px;
-}
-
-.middleCenter {
-    grid-area: middleCenter;
-    padding: 20px;
-}
-
-.middleRight {
-    grid-area: middleRight;
-    padding: 20px;
-}
-
-.bottomLeft {
-    grid-area: bottomLeft;
-    padding: 20px;
-}
-
-.bottomCenter {
-    grid-area: bottomCenter;
-    padding: 20px;
-}
-
-.bottomRight {
-    grid-area: bottomRight;
-    padding: 20px;
-    position: relative;
-}
-
-#bottomID {
-    bottom: 0;
-}
-
-.overclocked-project,
-.overclocked-code {
-    text-align: center;
-}
-
-.overclocked-code {
-    /* margin-top: 1700px; */
-    margin-top: 1850px;
-    /* tweak */
-}
-
-.ANT-D {
-    margin-top: 100px;
-    /* tweak */
 }
