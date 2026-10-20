@@ -185,6 +185,14 @@ p {
         margin-bottom: 12px;
     }
 
+    .profileBio {
+        font-size: medium;
+    }
+
+    .profileContact {
+        font-size: medium;
+    }
+
     .links {
         position: relative;
         top: auto;
